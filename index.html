@@ -3,203 +3,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Vylet</title>
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #191919;
             background: #ffffff;
-            color: #222222;
         }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* HEADER */
+
         header {
-            height: 75px;
+            height: 78px;
+            padding: 0 7%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 7%;
             border-bottom: 1px solid #eeeeee;
             background: #ffffff;
         }
 
         .logo {
-            font-size: 32px;
+            font-size: 31px;
             font-weight: 800;
-            color: #7b3fe4;
-            letter-spacing: -1px;
+            letter-spacing: -1.5px;
+            color: #7138d4;
         }
 
         nav {
             display: flex;
-            gap: 30px;
+            gap: 36px;
+            font-size: 14px;
+            font-weight: 500;
         }
 
         nav a {
-            text-decoration: none;
-            color: #333333;
-            font-size: 15px;
+            transition: 0.2s;
         }
 
         nav a:hover {
-            color: #7b3fe4;
+            color: #7138d4;
         }
 
-        .icons {
-            display: flex;
-            gap: 18px;
-            font-size: 21px;
-        }
-
-        .hero {
-            min-height: 520px;
+        .header-actions {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 22px;
+        }
+
+        .header-icon {
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 570px;
             padding: 70px 7%;
-            background: #faf8ff;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+            background: #faf9fd;
         }
 
-        .hero-text {
-            max-width: 520px;
+        .hero-content {
+            max-width: 560px;
         }
 
-        .hero-text p {
-            color: #7b3fe4;
-            font-weight: bold;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-
-        .hero-text h1 {
-            font-size: 58px;
-            line-height: 1.05;
+        .eyebrow {
+            color: #7138d4;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
             margin-bottom: 20px;
         }
 
-        .hero-text h1 span {
-            color: #7b3fe4;
+        .hero h1 {
+            font-size: clamp(48px, 6vw, 76px);
+            line-height: 0.98;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
         }
 
-        .hero-text .description {
-            color: #666666;
-            font-size: 17px;
-            line-height: 1.7;
-            margin-bottom: 30px;
+        .hero h1 span {
+            color: #7138d4;
         }
 
-        .shop-btn {
+        .hero-description {
+            color: #686868;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 470px;
+            margin-bottom: 34px;
+        }
+
+        .hero-button {
             display: inline-block;
-            padding: 14px 28px;
-            background: #7b3fe4;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+            background: #7138d4;
+            color: #ffffff;
+            padding: 15px 31px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.2s;
         }
 
-        .shop-btn:hover {
-            background: #6530c4;
+        .hero-button:hover {
+            background: #5927ad;
+            transform: translateY(-2px);
         }
 
-        .hero-image {
-            width: 420px;
-            height: 420px;
-            border-radius: 50%;
-            background: #eadfff;
+        .hero-visual {
+            height: 430px;
+            background: #eee8fa;
+            border-radius: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #7b3fe4;
-            font-size: 80px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .categories {
-            padding: 70px 7%;
-            text-align: center;
+        .hero-visual::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: #ffffff;
         }
 
-        .categories h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
+        .hero-visual-text {
+            position: relative;
+            z-index: 1;
+            font-size: 90px;
+            font-weight: 800;
+            color: #7138d4;
+            letter-spacing: -8px;
+        }
+
+        /* CATEGORIES */
+
+        .section {
+            padding: 90px 7%;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            margin-bottom: 38px;
+        }
+
+        .section-heading h2 {
+            font-size: 31px;
+            letter-spacing: -1px;
+        }
+
+        .section-heading p {
+            color: #777777;
+            font-size: 14px;
         }
 
         .category-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 18px;
         }
 
         .category {
-            padding: 35px 20px;
-            border: 1px solid #eeeeee;
-            border-radius: 12px;
-            transition: 0.2s;
+            min-height: 190px;
+            padding: 27px;
+            border: 1px solid #e9e9e9;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: 0.25s;
         }
 
         .category:hover {
-            border-color: #7b3fe4;
-            transform: translateY(-3px);
+            border-color: #7138d4;
+            transform: translateY(-4px);
         }
 
-        .category-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
+        .category-number {
+            color: #7138d4;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: auto;
         }
 
         .category h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
+            font-size: 20px;
+            margin-bottom: 7px;
         }
 
         .category p {
             color: #777777;
+            font-size: 13px;
+        }
+
+        /* FEATURED */
+
+        .featured {
+            background: #faf9fd;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            background: #ffffff;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid #eeeeee;
+        }
+
+        .product-image {
+            height: 270px;
+            background: #f0edf6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa0ba;
+            font-size: 13px;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product-info h3 {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            color: #7138d4;
+            font-weight: 700;
             font-size: 14px;
         }
+
+        /* BANNER */
+
+        .banner {
+            margin: 0 7% 90px;
+            padding: 55px;
+            background: #7138d4;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .banner h2 {
+            font-size: 34px;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .banner p {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        .banner-button {
+            background: #ffffff;
+            color: #7138d4;
+            padding: 14px 27px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* FOOTER */
 
         footer {
-            margin-top: 30px;
-            padding: 30px 7%;
-            text-align: center;
             border-top: 1px solid #eeeeee;
-            color: #777777;
-            font-size: 14px;
+            padding: 45px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        @media (max-width: 800px) {
+        .footer-logo {
+            color: #7138d4;
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        footer p {
+            color: #888888;
+            font-size: 12px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
             nav {
                 display: none;
             }
 
             .hero {
-                flex-direction: column;
-                text-align: center;
-                gap: 50px;
+                grid-template-columns: 1fr;
+                padding-top: 55px;
             }
 
-            .hero-image {
-                width: 280px;
-                height: 280px;
-                font-size: 55px;
+            .hero-visual {
+                height: 330px;
             }
 
-            .hero-text h1 {
-                font-size: 42px;
-            }
-
-            .category-grid {
+            .category-grid,
+            .products {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .banner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 25px;
             }
         }
 
-        @media (max-width: 500px) {
-            .category-grid {
+        @media (max-width: 550px) {
+
+            header {
+                padding: 0 5%;
+            }
+
+            .hero {
+                padding: 50px 5%;
+            }
+
+            .section {
+                padding: 65px 5%;
+            }
+
+            .category-grid,
+            .products {
                 grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .banner {
+                margin: 0 5% 65px;
+                padding: 35px;
+            }
+
+            footer {
+                padding: 35px 5%;
+                flex-direction: column;
+                gap: 15px;
             }
         }
     </style>
@@ -207,85 +386,223 @@
 
 <body>
 
-<header>
-    <div class="logo">Vylet</div>
+    <!-- HEADER -->
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Shop</a>
-        <a href="#">New Arrivals</a>
-        <a href="#">About</a>
-    </nav>
+    <header>
 
-    <div class="icons">
-        🛒
-        👤
-    </div>
-</header>
+        <a href="#" class="logo">Vylet</a>
 
-<section class="hero">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">About</a>
+        </nav>
 
-    <div class="hero-text">
-        <p>WELCOME TO VYLET</p>
+        <div class="header-actions">
 
-        <h1>
-            Your style.<br>
-            Your <span>way.</span>
-        </h1>
+            <!-- Search icon -->
+            <svg class="header-icon" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.8">
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+            </svg>
 
-        <div class="description">
-            Discover accessories and everyday finds made
-            for your style, your mood, and your world.
+            <!-- User icon -->
+            <svg class="header-icon" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="8" r="4"></circle>
+                <path d="M4 21c0-4.2 3.5-7 8-7s8 2.8 8 7"></path>
+            </svg>
+
+            <!-- Cart icon -->
+            <svg class="header-icon" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.8">
+                <path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6"></path>
+                <circle cx="10" cy="20" r="1"></circle>
+                <circle cx="18" cy="20" r="1"></circle>
+            </svg>
+
         </div>
 
-        <a href="#" class="shop-btn">
-            Shop Now
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                WELCOME TO VYLET
+            </div>
+
+            <h1>
+                Find what<br>
+                feels <span>right.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover products worth having, from everyday essentials
+                to unique finds and everything in between.
+            </p>
+
+            <a href="#" class="hero-button">
+                Shop Now
+            </a>
+
+        </div>
+
+        <div class="hero-visual">
+            <div class="hero-visual-text">V</div>
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <div>
+                <h2>Explore Vylet</h2>
+            </div>
+
+            <p>Something for every mood, style and occasion.</p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category">
+                <div class="category-number">01</div>
+                <h3>New Arrivals</h3>
+                <p>Fresh products just added.</p>
+            </div>
+
+            <div class="category">
+                <div class="category-number">02</div>
+                <h3>Trending</h3>
+                <p>What everyone is looking at.</p>
+            </div>
+
+            <div class="category">
+                <div class="category-number">03</div>
+                <h3>Everyday Essentials</h3>
+                <p>Useful things for everyday life.</p>
+            </div>
+
+            <div class="category">
+                <div class="category-number">04</div>
+                <h3>Gifts</h3>
+                <p>Find something worth giving.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURED PRODUCTS -->
+
+    <section class="section featured">
+
+        <div class="section-heading">
+
+            <div>
+                <h2>Featured Products</h2>
+            </div>
+
+            <p>Discover some of our latest finds.</p>
+
+        </div>
+
+        <div class="products">
+
+            <div class="product">
+                <div class="product-image">
+                    PRODUCT IMAGE
+                </div>
+
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <div class="product-price">SAR 00.00</div>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    PRODUCT IMAGE
+                </div>
+
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <div class="product-price">SAR 00.00</div>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    PRODUCT IMAGE
+                </div>
+
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <div class="product-price">SAR 00.00</div>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    PRODUCT IMAGE
+                </div>
+
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <div class="product-price">SAR 00.00</div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BANNER -->
+
+    <section class="banner">
+
+        <div>
+            <h2>There is more to discover.</h2>
+            <p>Explore the latest products at Vylet.</p>
+        </div>
+
+        <a href="#" class="banner-button">
+            Explore Shop
         </a>
-    </div>
 
-    <div class="hero-image">
-        V
-    </div>
+    </section>
 
-</section>
 
-<section class="categories">
+    <!-- FOOTER -->
 
-    <h2>Shop by Category</h2>
+    <footer>
 
-    <div class="category-grid">
-
-        <div class="category">
-            <div class="category-icon">💎</div>
-            <h3>Accessories</h3>
-            <p>Small details, big style.</p>
+        <div class="footer-logo">
+            Vylet
         </div>
 
-        <div class="category">
-            <div class="category-icon">🎀</div>
-            <h3>Trendy Finds</h3>
-            <p>Things you'll want to have.</p>
-        </div>
+        <p>
+            © 2026 Vylet. All rights reserved.
+        </p>
 
-        <div class="category">
-            <div class="category-icon">✨</div>
-            <h3>New Arrivals</h3>
-            <p>Fresh products added regularly.</p>
-        </div>
-
-        <div class="category">
-            <div class="category-icon">🛍️</div>
-            <h3>All Products</h3>
-            <p>Explore everything at Vylet.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<footer>
-    © 2026 Vylet. All rights reserved.
-</footer>
+    </footer>
 
 </body>
 </html>
