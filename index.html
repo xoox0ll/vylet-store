@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,9 +28,7 @@
             color: inherit;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
+        /* HEADER */
 
         header {
             height: 78px;
@@ -83,10 +80,7 @@
             display: block;
         }
 
-
-        /* =========================
-           SIDE MENU
-        ========================= */
+        /* SIDE MENU */
 
         .side-menu {
             position: fixed;
@@ -156,10 +150,7 @@
             display: block;
         }
 
-
-        /* =========================
-           HERO
-        ========================= */
+        /* HERO */
 
         .hero {
             min-height: 570px;
@@ -201,4 +192,707 @@
             padding: 15px 31px;
             border-radius: 6px;
             font-size: 14px;
-```
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .hero-button:hover {
+            transform: translateY(-2px);
+            opacity: 0.92;
+        }
+
+        .hero-image {
+            width: 100%;
+            min-height: 390px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-placeholder {
+            width: 100%;
+            height: 390px;
+            background: #eee8fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b7ba8;
+            font-size: 14px;
+            border-radius: 10px;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section.content-section {
+            padding: 90px 7%;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-size: 36px;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: #777777;
+            font-size: 15px;
+        }
+
+        /* SHOP BY CATEGORY */
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .category-card {
+            background: #faf9fd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.25s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .category-image {
+            height: 210px;
+            background: #eee8fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b7ba8;
+            font-size: 13px;
+        }
+
+        .category-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .category-info h3 {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        /* EXPLORE VYLET */
+
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .explore-card {
+            min-height: 250px;
+            background: #faf9fd;
+            border-radius: 10px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: 0.25s;
+        }
+
+        .explore-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .explore-image {
+            flex: 1;
+            background: #eee8fa;
+            border-radius: 7px;
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b7ba8;
+            font-size: 13px;
+        }
+
+        .explore-card h3 {
+            font-size: 19px;
+            margin-bottom: 7px;
+        }
+
+        .explore-card p {
+            color: #777777;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* FEATURED PRODUCTS */
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #eeeeee;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.25s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        }
+
+        .product-image {
+            height: 270px;
+            background: #faf9fd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b7ba8;
+            font-size: 13px;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product-info h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            color: #7138d4;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        /* CONTACT */
+
+        .contact-section {
+            margin: 20px 7% 90px;
+            background: #faf9fd;
+            padding: 70px 30px;
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        .contact-section h2 {
+            font-size: 34px;
+            margin-bottom: 14px;
+        }
+
+        .contact-section p {
+            color: #777777;
+            margin-bottom: 28px;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background: #7138d4;
+            color: #ffffff;
+            padding: 15px 28px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #eeeeee;
+            padding: 35px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+        }
+
+        .footer-logo {
+            color: #7138d4;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        footer p {
+            color: #888888;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                padding-top: 55px;
+            }
+
+            .hero-image {
+                min-height: 300px;
+            }
+
+            .hero-placeholder {
+                height: 300px;
+            }
+
+            .category-grid,
+            .explore-grid,
+            .featured-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 0 5%;
+            }
+
+            .header-actions {
+                gap: 15px;
+            }
+
+            .hero {
+                padding: 50px 5%;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            section.content-section {
+                padding: 65px 5%;
+            }
+
+            .category-grid,
+            .explore-grid,
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading h2 {
+                font-size: 30px;
+            }
+
+            .contact-section {
+                margin: 10px 5% 65px;
+            }
+
+            footer {
+                padding: 30px 5%;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .side-menu {
+                width: 290px;
+                right: -290px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <a href="#" class="logo">Vylet</a>
+
+        <div class="header-actions">
+
+            <!-- Search -->
+            <a href="#featured" aria-label="Search">
+                <svg class="header-icon" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.8"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+                </svg>
+            </a>
+
+            <!-- Account -->
+            <a href="#" aria-label="Account">
+                <svg class="header-icon" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.8"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="3.5"></circle>
+                    <path d="M5 21c.8-4.1 3.2-6.2 7-6.2s6.2 2.1 7 6.2"></path>
+                </svg>
+            </a>
+
+            <!-- Cart -->
+            <a href="#" aria-label="Cart">
+                <svg class="header-icon" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.8"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L21 8H6"></path>
+                    <circle cx="10" cy="20" r="1"></circle>
+                    <circle cx="18" cy="20" r="1"></circle>
+                </svg>
+            </a>
+
+            <!-- Menu -->
+            <button class="menu-button" onclick="openMenu()" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- SIDE MENU -->
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <aside class="side-menu" id="sideMenu">
+
+        <div class="menu-top">
+            <div class="menu-title">Vylet</div>
+
+            <button class="close-menu" onclick="closeMenu()">
+                ×
+            </button>
+        </div>
+
+        <a href="#" onclick="closeMenu()">Home</a>
+
+        <a href="#categories" onclick="closeMenu()">
+            Categories
+        </a>
+
+        <a href="#explore" onclick="closeMenu()">
+            Explore Vylet
+        </a>
+
+        <a href="#featured" onclick="closeMenu()">
+            Featured Products
+        </a>
+
+        <a
+            class="whatsapp-link"
+            href="https://wa.me/966572015384"
+            target="_blank">
+            Contact Us
+        </a>
+
+    </aside>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Discover your<br>
+                next <span>favorite.</span>
+            </h1>
+
+            <p class="hero-description">
+                اكتشفوا اختياراتكم المفضلة،
+                carefully selected to fit your
+                style, mood & everyday life.
+            </p>
+
+            <a href="#featured" class="hero-button">
+                Shop Now
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+            <div class="hero-placeholder">
+                Your main image
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SHOP BY CATEGORY -->
+
+    <section class="content-section" id="categories">
+
+        <div class="section-heading">
+
+            <h2>Shop by Category</h2>
+
+            <p>
+                Choose a category and explore what Vylet has to offer.
+            </p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card">
+                <div class="category-image">
+                    Category image
+                </div>
+
+                <div class="category-info">
+                    <h3>Category Name</h3>
+                </div>
+            </div>
+
+
+            <div class="category-card">
+                <div class="category-image">
+                    Category image
+                </div>
+
+                <div class="category-info">
+                    <h3>Category Name</h3>
+                </div>
+            </div>
+
+
+            <div class="category-card">
+                <div class="category-image">
+                    Category image
+                </div>
+
+                <div class="category-info">
+                    <h3>Category Name</h3>
+                </div>
+            </div>
+
+
+            <div class="category-card">
+                <div class="category-image">
+                    Category image
+                </div>
+
+                <div class="category-info">
+                    <h3>Category Name</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPLORE VYLET -->
+
+    <section class="content-section" id="explore">
+
+        <div class="section-heading">
+
+            <h2>Explore Vylet</h2>
+
+            <p>
+                Find something that fits you.
+            </p>
+
+        </div>
+
+        <div class="explore-grid">
+
+            <div class="explore-card">
+
+                <div class="explore-image">
+                    Image
+                </div>
+
+                <h3>New Arrivals</h3>
+
+                <p>
+                    Fresh finds, just for you.
+                </p>
+
+            </div>
+
+
+            <div class="explore-card">
+
+                <div class="explore-image">
+                    Image
+                </div>
+
+                <h3>Trending</h3>
+
+                <p>
+                    What's catching everyone's eye.
+                </p>
+
+            </div>
+
+
+            <div class="explore-card">
+
+                <div class="explore-image">
+                    Image
+                </div>
+
+                <h3>Everyday Essentials</h3>
+
+                <p>
+                    Things that fit right into your day.
+                </p>
+
+            </div>
+
+
+            <div class="explore-card">
+
+                <div class="explore-image">
+                    Image
+                </div>
+
+                <h3>Gifts</h3>
+
+                <p>
+                    Find something worth giving.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURED PRODUCTS -->
+
+    <section class="content-section" id="featured">
+
+        <div class="section-heading">
+
+            <h2>Featured Products</h2>
+
+            <p>
+                A few picks worth checking out.
+            </p>
+
+        </div>
+
+        <div class="featured-grid">
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    Product image
+                </div>
+
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <div class="product-price">SAR 00.00</div>
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    Product image
+                </div>
+
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <div class="product-price">SAR 00.00</div>
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    Product image
+                </div>
+
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <div class="product-price">SAR 00.00</div>
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    Product image
+                </div>
+
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <div class="product-price">SAR 00.00</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact-section">
+
+        <h2>Need help?</h2>
+
+        <p>
+            We're here if you have any questions about your order or our products.
+        </p>
+
+        <a
+            class="whatsapp-button"
+            href="https://wa.me/966572015384"
+            target="_blank">
+            Contact us on WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Vylet
+        </div>
+
+        <p>
+            © 2026 Vylet. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function openMenu() {
+            document.getElementById("sideMenu").classList.add("active");
+            document.getElementById("overlay").classList.add("active");
+        }
+
+        function closeMenu() {
+            document.getElementById("sideMenu").classList.remove("active");
+            document.getElementById("overlay").classList.remove("active");
+        }
+
+    </script>
+
+</body>
+</html>
